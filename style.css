@@ -1,0 +1,165 @@
+/* Общие стили */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1b1b1b;
+  color: #e0e0e0;
+}
+
+a {
+  text-decoration: none;
+  color: #cccccc;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* Шапка */
+header {
+  background-color: #111;
+  padding: 20px 0;
+  border-bottom: 1px solid #333;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+/* Контейнер */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Слайдер */
+.slider {
+  position: relative;
+  height: 320px;
+  background-color: #222;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.slide-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-left: 5px solid #0077cc;
+  border-radius: 8px;
+}
+
+.slide-text h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.slide-text p {
+  margin-bottom: 0;
+  color: #ddd;
+}
+
+/* Инфо-блоки */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 0;
+  padding: 0 10px;
+}
+
+.info-block {
+  background-color: #2a2a2a;
+  padding: 25px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 30%;
+  min-width: 250px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.info-block h2 {
+  color: #ffffff;
+}
+
+.info-block ul {
+  padding-left: 20px;
+  color: #b0b0b0;
+}
+
+/* Поиск */
+.search {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.search input {
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Каталог */
+.catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0 30px 50px;
+}
+
+.catalog-item {
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-left: 5px solid #0077cc;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.catalog-item:hover {
+  background-color: #3a3a3a;
+}
+
+.catalog-item h2 {
+  margin-top: 0;
+}
+
+.catalog-item p {
+  color: #cccccc;
+}

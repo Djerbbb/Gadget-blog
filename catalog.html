@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Гаджет Блог | Каталог</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Каталог Обзоров</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-sort">
+    <input type="text" placeholder="Поиск среди статей..." id="searchField" />
+    <select id="sortOptions">
+      <option value="">Сортировка</option>
+      <option value="rating-desc">По рейтингу (по убыв.)</option>
+      <option value="rating-asc">По рейтингу (по возр.)</option>
+    </select>
+  </section>
+
+  <section class="catalog">
+    <div class="items">
+
+      <div class="item" data-name="x200" data-price="499">
+        <a href="item.html">
+          <img src="images/x200_main.jpg" alt="Смартфон X200">
+          <h3>Смартфон X200</h3>
+          <p>AMOLED-экран, 4 камеры и батарея на 5000 мАч. Идеален для игр и фото.</p>
+        </a>
+      </div>
+
+      <div class="item" data-category="смартфоны" data-rating="5">
+        <a href="item.html">
+          <img src="images/iphone15.jpg" alt="iPhone 15 Pro Max" />
+          <h3>iPhone 15 Pro Max: переоценён?</h3>
+          <p>Детально рассматриваем флагман Apple: от камер до троттлинга.</p>
+        </a>
+      </div>
+
+      <div class="item" data-category="ноутбуки" data-rating="4">
+        <a href="*">
+          <img src="images/zenbook-vs-mac.jpg" alt="ASUS vs MacBook" />
+          <h3>ASUS ZenBook 14 vs MacBook Air M2</h3>
+          <p>Сравнение для учёбы и работы: кто победит в битве ультрабуков?</p>
+        </a>
+      </div>
+
+      <div class="item" data-category="смарт-часы" data-rating="3">
+        <a href="*">
+          <img src="images/galaxywatch6.jpg" alt="Galaxy Watch 6" />
+          <h3>Galaxy Watch 6 — шаг вперёд?</h3>
+          <p>Что нового в сравнении с предыдущей моделью? Разбираем обновления.</p>
+        </a>
+      </div>
+
+      <div class="item" data-category="гарнитуры" data-rating="4">
+        <a href="*">
+          <img src="images/sony-wh1000xm5.jpg" alt="Sony WH-1000XM5" />
+          <h3>Sony WH-1000XM5 — звук без компромиссов</h3>
+          <p>Тестируем шумоподавление, звук, микрофон и автономность.</p>
+        </a>
+      </div>
+
+      <div class="item" data-category="планшеты" data-rating="2">
+        <a href="*">
+          <img src="images/ipad10.png" alt="iPad 10" />
+          <h3>iPad 10 — странная эволюция</h3>
+          <p>Спорные решения Apple: интерфейс, аксессуары, цена.</p>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+</body>
+</html>

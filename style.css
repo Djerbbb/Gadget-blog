@@ -47,8 +47,10 @@ nav a {
 /* Слайдер */
 .slider {
   position: relative;
-  height: 320px;
-  background-color: #222;
+  width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
 
 .slide {
@@ -56,38 +58,74 @@ nav a {
   position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.slide.active {
-  display: block;
+  animation: fade 1s ease-in-out;
 }
 
 .slide img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  display: block;
   object-fit: cover;
-  opacity: 0.4;
+  filter: brightness(0.6);
+}
+
+.slide.active {
+  display: block;
+  position: relative;
 }
 
 .slide-text {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 10%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px;
-  border-left: 5px solid #0077cc;
-  border-radius: 8px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 2;
+  max-width: 500px;
 }
 
 .slide-text h2 {
-  margin-top: 0;
-  color: #fff;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .slide-text p {
-  margin-bottom: 0;
-  color: #ddd;
+  font-size: 18px;
 }
+
+.slider-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+}
+
+.slider-controls button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.slider-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 
 /* Инфо-блоки */
 .info {
@@ -349,4 +387,41 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+}
+
+.scroll-ready {
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-ready.left {
+  transform: translateX(-100px);
+}
+
+.scroll-ready.right {
+  transform: translateX(100px);
+}
+
+.scroll-ready.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.search-sort input,
+.search-sort select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
 }

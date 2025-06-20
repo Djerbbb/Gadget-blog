@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Гаджет Блог | Каталог</title>
   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
   <header>
@@ -19,13 +20,14 @@
   </header>
 
   <section class="search-sort">
-    <input type="text" placeholder="Поиск среди статей..." id="searchField" />
-    <select id="sortOptions">
-      <option value="">Сортировка</option>
-      <option value="rating-desc">По рейтингу (по убыв.)</option>
-      <option value="rating-asc">По рейтингу (по возр.)</option>
-    </select>
-  </section>
+  <input type="text" placeholder="Поиск среди статей..." id="searchField" />
+  <select id="sortSelect">
+    <option value="default">Сортировка</option>
+    <option value="title">По названию (А-Я)</option>
+    <option value="rating">По рейтингу (по убыванию)</option>
+  </select>
+</section>
+
 
   <section class="catalog">
     <div class="items">
@@ -81,5 +83,6 @@
 
     </div>
   </section>
+  <script src="catalog.js"></script>
 </body>
 </html>

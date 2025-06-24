@@ -436,3 +436,26 @@ footer {
   border-radius: 5px;
   flex: 1;
 }
+
+.pagination {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination button.active-page {
+  background-color: #333;
+  color: white;
+}

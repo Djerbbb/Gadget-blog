@@ -19,12 +19,13 @@
   <main class="contact-page">
     <section class="contact-form">
       <h2>Связаться с нами</h2>
-      <form>
-        <input type="text" placeholder="Ваше имя" required />
-        <input type="email" placeholder="Электронная почта" required />
-        <textarea placeholder="Ваше сообщение" required></textarea>
+      <form id="contactForm" novalidate>
+        <input type="text" id="name" placeholder="Ваше имя" required />
+        <input type="email" id="email" placeholder="Электронная почта" required />
+        <textarea id="message" placeholder="Ваше сообщение" required></textarea>
         <button type="submit">Отправить</button>
       </form>
+      <p id="formMessage"></p>
     </section>
 
     <section class="map">
@@ -36,15 +37,15 @@
       <p>Email: gadgets@blog.ru</p>
       <p>Телефон: +7 952 812-02-02</p>
       <div class="socials">
-        <a href="https://vk.com" target="_blank">VK</a>
-        <a href="https://t.me" target="_blank">Telegram</a>
-        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://vk.com" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer">Telegram</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Блог о гаджетах</p>
   </footer>
+    <script src="contact.js"></script>
 </body>
 </html>
